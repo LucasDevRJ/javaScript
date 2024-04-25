@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meu primeiro programa...</title>
+        <style>
+            body {
+                background-color: rgb(105, 105, 173);
+                color: white; /* Comentário em CSS */
+                font: normal 20pt Arial;
+            }
+
+            h1 {
+                color: rgb(255, 212, 22);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Olá, mundo!</h1> <!-- Isso é um comentário -->
+        <p>Já me livrei da maldição!!</p>
+        <script>
+            //parseInt converte o valor para número inteiro
+            //var n1 = Number.parseInt(window.prompt('Digite um número: '));
+            //var n2 = Number.parseInt(window.prompt('Digite outro número: '));
+
+            //Number é mais generico, servindo tanto para conversão de inteiro e real
+            var n1 = Number(window.prompt('Digite um número: '));
+            var n2 = Number(window.prompt('Digite outro número: '));
+            var s = n1 + n2;
+            //alert('A soma dos valores é ' + s); //Concatenação
+            alert('A soma dos valores é ' + s.toString()); //toString() converte para String
+            //+ serve para adição (somente números)
+            //+ também serve para concatenação
+        </script>
+    </body>
+</html>
