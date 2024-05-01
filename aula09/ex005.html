@@ -16,7 +16,7 @@
     <h1>Iniciando estudos com DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
-    <div>Clique em mim</div>
+    <div id="msg">Clique em mim</div>
     <script>
         //Escrevendo no HTML com JS
         window.document.write('Olá, Mundo!');
@@ -47,6 +47,22 @@
         //Strings formatadas utilizando o innerHTML
         window.document.write('<br/>');
         document.write(p1.innerHTML);
+
+        //Armazenando elemento por ID
+        var d = window.document.getElementById('msg');
+        d.style.background = 'green';
+        d.innerText = 'Estou aguardando...'; 
+
+        /*
+        var d = window.document.getElementsByName('msg');
+        d.innerText = 'Olá!!';
+
+        d = window.document.getElementsByClassName('msg');
+        d.innerText = 'Olá!!'; 
+        
+        var d = window.document.querySelector('div#msg');
+        d.style.color = 'white';
+        */
     </script>
 </body>
 </html>
