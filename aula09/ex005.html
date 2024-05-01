@@ -28,6 +28,25 @@
 
         //Exibindo o navegador
         window.document.write(window.navigator.appName);
+        window.document.write('<br/>');
+
+        //Exibindo a URL do navegador
+        window.document.write(window.document.URL);
+        window.document.write('<br/>');
+
+        //Armazenando o valor do primeiro paragráfo e o exibindo na tela
+        var p1 = window.document.getElementsByTagName('p')[0];
+        window.document.write("Está escrito assim: " + p1.innerText);
+        p1.style.color = 'black';
+
+        var corpo = window.document.body;
+        corpo.style.background = 'yellow';
+
+        p1 = window.document.getElementsByTagName('p')[1];
+
+        //Strings formatadas utilizando o innerHTML
+        window.document.write('<br/>');
+        document.write(p1.innerHTML);
     </script>
 </body>
 </html>
