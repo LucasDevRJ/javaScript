@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <label for="">Digite o páis em que está vivendo:</label>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Exibir" onclick="exibeNacionalidade()">
+    <p id="resposta"></p>
+    <script>
+        function exibeNacionalidade() {
+            var pais = document.getElementById("pais").value;
+            console.log(pais);
+            var resposta = document.getElementById("resposta");
+            if (pais == "Brasil" || pais == "brasil") {
+                resposta.innerHTML = "Você é brasileiro!";
+            } else {
+                resposta.innerHTML = "Você é estrangeiro!";
+            }
+        }
+    </script>
+</body>
+</html>
