@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
 </head>
 <body>
     <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div>Clique em mim</div>
+    <script>
+        //Escrevendo no HTML com JS
+        window.document.write('Olá, Mundo!');
+        window.document.write('<br/>');
+
+        //Exibindo o charset da página
+        window.document.write(window.document.charset);
+        window.document.write('<br/>');
+
+        //Exibindo o navegador
+        window.document.write(window.navigator.appName);
+    </script>
 </body>
 </html>
