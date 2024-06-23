@@ -14,22 +14,31 @@ function contarPassos() {
     valorFim = parseInt(valorFim); 
     valorPasso = parseInt(valorPasso); 
 
-    if(valorPasso == 0 || valorPasso < 0) {
-        alert("Passo inválido! Considerando PASSO 1");
-    } else if (isNaN(valorInicio) || valorInicio < 0) {
+    if (isNaN(valorInicio) || valorInicio < 0 || isNaN(valorFim)) {
         mensagem.innerHTML = "Impossível contar!";
     } else {
-        while (valorInicio <= valorFim) {
-            //let emoji = valorInicio < valorFim ? "&#x1F449;" : "&#x1F3C1;";
-            //console.log(emoji);
-            resultadoContador.innerHTML += valorInicio + "&#x1F449;";
-            if (valorInicio >= valorFim) {
-                resultadoContador.innerHTML += "&#x1F3C1;";
-            }
-            valorInicio += valorPasso;
-            console.log(valorInicio);
+        if (valorPasso == 0) {
+            alert("Passo inválido! Considerando PASSO 1");
+            valorPasso = 1;
         }
-    
+        if (valorInicio <= valorFim) {
+            while (valorInicio <= valorFim) {
+                resultadoContador.innerHTML += valorInicio + "&#x1F449;";
+                if (valorInicio >= valorFim) {
+                    resultadoContador.innerHTML += "&#x1F3C1;";
+                }
+                valorInicio += valorPasso;
+            }
+        } else {
+            while (valorInicio >= valorFim) {
+                resultadoContador.innerHTML += valorInicio + "&#x1F449;";
+                if (valorInicio <= valorFim) {
+                    resultadoContador.innerHTML += "&#x1F3C1;";
+                }
+                valorInicio -= valorPasso;
+            }
+        }
+        
         mensagem.innerHTML = "Contando...";
     }
 }
