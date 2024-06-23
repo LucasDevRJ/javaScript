@@ -1,5 +1,5 @@
 body {
-    /*background: rgb(70, 142, 236);*/
+    background: rgb(70, 142, 236);
     font: normal 15pt Arial;
 }
 
@@ -9,23 +9,25 @@ header {
 }
 
 section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
     background: white;
     border-radius: 10px;
-    padding: 15px;
-    width: 500px;
+    padding: 30px 10px;
+    width: 40%;
     margin: auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
 }
 
-div {
-    text-align: center;
-    padding: 8px;
+section input {
+    width: 30%;
+    padding: 3px 7px;
 }
 
-#imagem {
-    width: 50%;
-    border-radius: 100%;
-    height: 200px;
+select {
+    height: 170px;
+    width: 31%;
 }
 
 footer {

@@ -1,17 +1,25 @@
-function carregar() {
-    var msg = window.document.getElementById("msg");
-    var img = window.document.getElementById("imagem");
-    var data = new Date();
-    var hora = data.getHours();
-    msg.innerHTML = `Agora são ${hora} horas.`;
-    if (hora >= 0 && hora < 12) {
-        img.src = "manha.jpg";
-        window.document.body.style.background = "#e2cd9f";
-    } else if (hora >= 12 && hora < 18) {
-        img.src = "tarde.jpg";
-        window.document.body.style.background = "#b9846f";
+var select = document.querySelector("select");
+var botao = document.getElementById("botaoTabuada");
+var option = document.createElement("option");
+var mensagem = document.createTextNode("Digite um número acima");
+option.appendChild(mensagem);
+select.appendChild(option);
+
+botao.onclick =  function calcularTabuada() {
+    let numeroDigitado = document.getElementById("numero").value;
+    numeroDigitado = parseInt(numeroDigitado);
+    let conta;
+    if (isNaN(numeroDigitado)) { 
+        alert("Por favor, digite um número!");
     } else {
-        img.src = "noite.jpg";
-        window.document.body.style.background = "#515154";
+        select.removeChild(option);
+        for (let i = 1; i <= 10; i++) {
+            option = document.createElement("option");
+            conta = numeroDigitado * i;
+            //tabuada.innerHTML += `${numeroDigitado} x ${i} = ${conta}`;
+            var optionValor = document.createTextNode(`${numeroDigitado} x ${i} = ${conta}`);
+            option.appendChild(optionValor);
+            select.appendChild(option);
+        }
     }
 }
