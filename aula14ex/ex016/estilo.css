@@ -1,0 +1,38 @@
+body {
+    /*background: rgb(70, 142, 236);*/
+    font: normal 15pt Arial;
+    background: rgb(70, 142, 236);
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background: white;
+    border-radius: 10px;
+    padding: 30px 10px;
+    width: 40%;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+}
+
+section input {
+    width: 40%;
+    padding: 3px 7px;
+}
+
+#botaoContar {
+    margin-top: 20px;
+    width: 20%;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
