@@ -1,0 +1,44 @@
+body {
+    background: rgb(70, 142, 236);
+    font: normal 15pt Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+.divisao-numeros {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background: white;
+    border-radius: 10px;
+    padding: 30px 10px;
+    width: 50%;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+}
+
+.divisao-adicao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+}
+
+section input {
+    width: 30%;
+    padding: 3px 7px;
+}
+
+select {
+    margin: 20px 0;
+    width: 31%;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
