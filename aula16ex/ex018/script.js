@@ -12,9 +12,10 @@ let p = document.createElement("p");
 botaoAdicionar.onclick =  function adicionarNumero() {
     if (estatisticasForamExibidas) {
         let paragrafos = document.getElementsByClassName("paragrafoEstatistico");
-        for (let i = 4; i <= paragrafos.length; i--) {
+        for (let i = 4; i >= 0; i--) {
             estatisticas.removeChild(paragrafos[i]);
         }
+        estatisticasForamExibidas = false;
     }
     let campoNumero = document.getElementById("numero");
     let numeroDigitado = campoNumero.value;
@@ -40,7 +41,6 @@ botaoAdicionar.onclick =  function adicionarNumero() {
         select.appendChild(option);
         numeros.push(numeroDigitado);
         campoNumero.value = "";
-        //console.log(numeros);
     }
 }
 
